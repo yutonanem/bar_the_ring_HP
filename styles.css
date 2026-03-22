@@ -326,3 +326,9 @@ img {
     height: 180px;
   }
 }
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
