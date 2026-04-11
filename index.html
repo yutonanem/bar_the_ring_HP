@@ -1,201 +1,299 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Bar the RING | 新橋の大人バー（サンプル）</title>
-  <meta name="description" content="新橋のBar the RING サンプルサイト。元プロボクサー保田さんのセカンドキャリアとして開店したバー。カラオケ・ダーツ完備。" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bar the RING | 新橋</title>
+  <meta name="description" content="Bar the RING — 元プロボクサーが手がける新橋の大人のためのバー。飲み放題・カラオケ・ダーツを楽しめる上質な空間。">
+  <meta property="og:title" content="Bar the RING | 新橋">
+  <meta property="og:description" content="元プロボクサーが手がける新橋の大人のためのバー。">
+  <meta property="og:image" content="assets/view.jpeg">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="top" id="top">
-    <div class="topbar">
-      <div class="logo-wrap">
-        <img class="logo" src="assets/logo.jpeg" alt="Bar the RING ロゴ" />
-        <div class="logo-text">
-          <p class="logo-title">Bar the RING</p>
-          <p class="logo-sub">新橋｜大人が遊べるBAR</p>
-        </div>
-      </div>
-      <div class="top-info">
-        <p>〒105-0004 東京都港区新橋3-3-3 新橋パイオニアビル4F</p>
-        <p>TEL: 03-0000-0000（サンプル）｜21:00 - 5:00｜日曜・祝日定休（参考）</p>
-        <p>Instagram: @barthering419</p>
-      </div>
-    </div>
 
-    <nav class="gnav">
-      <a href="#information">INFORMATION</a>
-      <a href="#news">NEWS</a>
-      <a href="#concept">CONCEPT</a>
-      <a href="#gallery_jump">GALLERY</a>
-      <a href="#access">ACCESS</a>
-      <a href="#link">LINK</a>
-    </nav>
-
-    <div class="hero">
-      <img src="assets/view.jpeg" alt="Bar the RING 店内" />
-      <div class="hero-caption">
-        <p class="en">A night to play, a night to remember.</p>
-        <h1>遊べる夜が、
-          <span>本物</span>になる。</h1>
-        <p class="lead">元プロボクサー保田さんのセカンドキャリアとして開店した大人のBAR。</p>
-      </div>
+  <!-- ========== HEADER ========== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a class="header__logo" href="#top">
+        <img src="assets/logo.jpeg" alt="Bar the RING" width="40" height="40">
+        <span>Bar the RING</span>
+      </a>
+      <nav class="header__nav" id="nav">
+        <a href="#information">INFORMATION</a>
+        <a href="#news">NEWS</a>
+        <a href="#concept">CONCEPT</a>
+        <a href="#gallery">GALLERY</a>
+        <a href="#access">ACCESS</a>
+        <a href="#link">LINK</a>
+      </nav>
+      <button class="header__burger" id="burger" aria-label="メニューを開く" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="top">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content" data-animate>
+      <img class="hero__logo" src="assets/logo.jpeg" alt="Bar the RING" width="240" height="240">
+      <h1 class="hero__title">Bar the RING</h1>
+    </div>
+  </section>
+
   <main>
+
+    <!-- ========== INFORMATION ========== -->
     <section class="section" id="information">
-      <h2>INFORMATION</h2>
-      <p class="section-lead">
-        カラオケ・ダーツ・ゲーム完備。新橋の夜を上質に遊べる空間です。
-      </p>
-      <div class="info-grid">
-        <div>
-          <p class="label">CHARGE</p>
-          <p>1h 飲み放題 2,500円（参考）</p>
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>INFORMATION</h2>
+          <p>料金・営業案内</p>
         </div>
-        <div>
-          <p class="label">HOURS</p>
-          <p>21:00 - 5:00（L.O.目安）</p>
-        </div>
-        <div>
-          <p class="label">CLOSED</p>
-          <p>日曜・祝日定休（参考）</p>
-        </div>
-        <div>
-          <p class="label">RESERVATION</p>
-          <p>LINE / 電話 / Instagram DM（サンプル）</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="line">
-      <h2>RESERVATION / STATUS</h2>
-      <p class="section-lead">
-        予約・混雑確認はこちら（サンプル）。将来的に公式LINEから受付予定です。
-      </p>
-      <div class="line-cta">
-        <div>
-          <p class="label">LINE</p>
-          <p>予約 / 空席確認 / 料金案内 / アクセス</p>
-          <p class="note">※本ページはサンプルのため、QRは仮表示です。</p>
-        </div>
-        <div class="qr-box">
-          LINE QR
-          <span>準備中</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="section alt" id="news">
-      <h2>NEWS</h2>
-      <div class="news-list">
-        <article class="news-card">
-          <img src="assets/biproom.jpeg" alt="VIP席の紹介" />
-          <div>
-            <p class="date">2026.03.10</p>
-            <p class="news-title">VIP席のご案内を開始しました（サンプル）</p>
+        <div class="info-grid">
+          <div class="info-card" data-animate>
+            <h3>CHARGE</h3>
+            <p class="info-card__label">料金</p>
+            <p class="info-card__body">&yen;2,500 / 1h<br><span class="info-card__note">飲み放題（税込・参考価格）</span></p>
+            <p class="info-card__extra">カラオケ・ダーツ 無料</p>
           </div>
-        </article>
-        <article class="news-card">
-          <img src="assets/view.jpeg" alt="店内の雰囲気" />
-          <div>
-            <p class="date">2026.02.28</p>
-            <p class="news-title">店内リニューアルのお知らせ（サンプル）</p>
+          <div class="info-card" data-animate>
+            <h3>OPEN</h3>
+            <p class="info-card__label">営業時間</p>
+            <p class="info-card__body">21:00 &mdash; 5:00</p>
           </div>
-        </article>
-        <article class="news-card">
-          <img src="assets/menu2.jpeg" alt="飲み放題メニュー" />
-          <div>
-            <p class="date">2026.02.14</p>
-            <p class="news-title">飲み放題メニューを更新しました（サンプル）</p>
+          <div class="info-card" data-animate>
+            <h3>CLOSED</h3>
+            <p class="info-card__label">定休日</p>
+            <p class="info-card__body">日曜日・祝日</p>
           </div>
-        </article>
-        <article class="news-card">
-          <img src="assets/menu1.png" alt="通常メニュー" />
-          <div>
-            <p class="date">2026.01.30</p>
-            <p class="news-title">季節限定カクテルが登場（サンプル）</p>
+          <div class="info-card" data-animate>
+            <h3>RESERVATION</h3>
+            <p class="info-card__label">ご予約</p>
+            <p class="info-card__body">LINE / お電話<br>Instagram DM</p>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section" id="concept">
-      <h2>CONCEPT</h2>
-      <div class="concept">
-        <div class="concept-text">
-          <p class="en">The Ring for grown-ups.</p>
-          <p>
-            “勝者が集う、夜のリング”。
-            静かな艶と遊びの熱量を両立する、安心して楽しめる大人のバー。
-          </p>
-          <p>
-            元プロボクサー・保田さんのセカンドキャリアとして誕生。
-            新橋・内幸町エリアの大人たちが集う、上質な社交場を目指します。
-          </p>
-          <p class="lead">※本ページはサンプルサイトです。内容は参考情報に基づき作成しています。</p>
-        </div>
-        <div class="concept-image">
-          <img src="assets/biproom.jpeg" alt="VIP席の雰囲気" />
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="gallery_jump">
-      <h2>GALLERY</h2>
-      <div class="gallery">
-        <img src="assets/view.jpeg" alt="店内の雰囲気" />
-        <img src="assets/biproom.jpeg" alt="VIP席" />
-        <img src="assets/menu1.png" alt="通常メニュー表" />
-        <img src="assets/menu2.jpeg" alt="飲み放題メニュー表" />
-      </div>
-    </section>
-
-    <section class="section" id="access">
-      <h2>ACCESS</h2>
-      <div class="access">
-        <div class="access-info">
-          <p class="label">ADDRESS</p>
-          <p>東京都港区新橋3-3-3 新橋パイオニアビル4F</p>
-          <p class="label">STATION</p>
-          <p>都営三田線 内幸町駅 徒歩5分 / JR新橋駅 徒歩6分（参考）</p>
-          <p class="label">TEL</p>
-          <p>03-0000-0000（サンプル）</p>
-          <p class="label">OPEN</p>
-          <p>21:00 - 5:00（L.O.目安）</p>
-          <p class="label">NOTE</p>
-          <p>21時以降は混み合うため、早めのご来店がおすすめです。</p>
+    <!-- ========== LINE RESERVATION ========== -->
+    <section class="section section--alt" id="reservation">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>RESERVATION</h2>
+          <p>ご予約・混雑確認</p>
         </div>
-        <div class="map">
-          <iframe
-            title="Bar the RING Map"
-            src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%96%B0%E6%A9%8B3-3-3%20%E6%96%B0%E6%A9%8B%E3%83%91%E3%82%A4%E3%82%AA%E3%83%8B%E3%82%A2%E3%83%93%E3%83%AB4F&output=embed"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+        <div class="reservation-grid">
+          <div class="reservation__text" data-animate>
+            <p>LINEからお気軽にご予約・混雑状況のお問い合わせが可能です。</p>
+            <p>QRコードを読み取るか、下記ボタンからお友達追加をお願いいたします。</p>
+            <p class="reservation__note">※ サンプル表示です。実際のQRコードはオーナー確認後に差し替えます。</p>
+          </div>
+          <div class="reservation__qr" data-animate>
+            <div class="qr-frame">
+              <img src="assets/LINE.jpg" alt="LINE QRコード" width="200" height="200">
+            </div>
+            <p class="qr-label">LINEでお友達追加</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section alt" id="link">
-      <h2>LINK</h2>
-      <div class="link-list">
-        <a href="https://www.instagram.com/barthering419/" target="_blank" rel="noreferrer">Instagram @barthering419</a>
-        <a href="#information">料金・システム</a>
-        <a href="#news">最新ニュース</a>
-        <a href="#gallery_jump">店内ギャラリー</a>
-        <a href="#access">アクセス</a>
+    <!-- ========== NEWS ========== -->
+    <section class="section" id="news">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>NEWS</h2>
+          <p>最新情報</p>
+        </div>
+        <div class="news-list">
+          <article class="news-card" data-animate>
+            <div class="news-card__img">
+              <img src="assets/view.jpeg" alt="店内の様子" loading="lazy">
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">2025.02.01</time>
+              <h3 class="news-card__title">Bar the RING グランドオープン</h3>
+            </div>
+          </article>
+          <article class="news-card" data-animate>
+            <div class="news-card__img">
+              <img src="assets/biproom.jpeg" alt="VIPルーム" loading="lazy">
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">2025.03.15</time>
+              <h3 class="news-card__title">VIPルームご利用開始のお知らせ</h3>
+            </div>
+          </article>
+          <article class="news-card" data-animate>
+            <div class="news-card__img">
+              <img src="assets/menu1.png" alt="メニュー" loading="lazy">
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">2025.04.01</time>
+              <h3 class="news-card__title">春の新メニュー登場</h3>
+            </div>
+          </article>
+          <article class="news-card" data-animate>
+            <div class="news-card__img">
+              <img src="assets/menu2.jpeg" alt="飲み放題メニュー" loading="lazy">
+            </div>
+            <div class="news-card__body">
+              <time class="news-card__date">2025.05.10</time>
+              <h3 class="news-card__title">飲み放題メニューリニューアル</h3>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
+
+    <!-- ========== CONCEPT ========== -->
+    <section class="section section--alt" id="concept">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>CONCEPT</h2>
+          <p>オーナーストーリー</p>
+        </div>
+        <div class="concept-grid">
+          <div class="concept__text" data-animate>
+            <h3 class="concept__subtitle">リングからカウンターへ。</h3>
+            <p>オーナー・安田勝也は、WBOアジアパシフィックライト級の頂点に立った元プロボクサー。</p>
+            <p>リングで培った「本気で向き合う姿勢」を、今度はバーカウンターの向こう側から届けたい——そんな想いで2025年、新橋の地にBar the RINGを開きました。</p>
+            <p>テキーラを中心に厳選したお酒、カラオケやダーツを自由に楽しめる空間。仕事帰りの一杯から、仲間との深夜の語らいまで、大人が本気で遊べる場所をご用意しています。</p>
+            <p class="concept__note">※ 本文はサンプルです。参考情報を元に作成しています。</p>
+          </div>
+          <div class="concept__image" data-animate>
+            <img src="assets/biproom.jpeg" alt="Bar the RING VIPルーム" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== GALLERY ========== -->
+    <section class="section" id="gallery">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>GALLERY</h2>
+          <p>ギャラリー</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-item" data-animate>
+            <img src="assets/view.jpeg" alt="店内の雰囲気" loading="lazy">
+          </figure>
+          <figure class="gallery-item" data-animate>
+            <img src="assets/biproom.jpeg" alt="VIP席" loading="lazy">
+          </figure>
+          <figure class="gallery-item" data-animate>
+            <img src="assets/menu1.png" alt="通常メニュー" loading="lazy">
+          </figure>
+          <figure class="gallery-item" data-animate>
+            <img src="assets/menu2.jpeg" alt="飲み放題メニュー" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== ACCESS ========== -->
+    <section class="section section--alt" id="access">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>ACCESS</h2>
+          <p>アクセス</p>
+        </div>
+        <div class="access-grid">
+          <div class="access__info" data-animate>
+            <dl class="access-dl">
+              <dt>ADDRESS</dt>
+              <dd>〒105-0004<br>東京都港区新橋3-3-3<br>新橋パイオニアビル4F</dd>
+
+              <dt>STATION</dt>
+              <dd>都営三田線 内幸町駅 徒歩5分<br>JR / 東京メトロ 新橋駅 徒歩6分</dd>
+
+              <dt>TEL</dt>
+              <dd><a href="tel:03-0000-0000">03-0000-0000</a><span class="access__sample">（サンプル）</span></dd>
+
+              <dt>OPEN</dt>
+              <dd>21:00 &mdash; 5:00</dd>
+
+              <dt>CLOSED</dt>
+              <dd>日曜日・祝日</dd>
+            </dl>
+          </div>
+          <div class="access__map" data-animate>
+            <iframe
+              src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B8%AF%E5%8C%BA%E6%96%B0%E6%A9%8B3-3-3+%E6%96%B0%E6%A9%8B%E3%83%91%E3%82%A4%E3%82%AA%E3%83%8B%E3%82%A2%E3%83%93%E3%83%AB&output=embed"
+              width="100%"
+              height="100%"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Bar the RING 所在地">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== LINK ========== -->
+    <section class="section" id="link">
+      <div class="section__inner">
+        <div class="section__heading" data-animate>
+          <h2>LINK</h2>
+          <p>リンク</p>
+        </div>
+        <div class="link-list" data-animate>
+          <a class="link-btn" href="https://www.instagram.com/barthering419/" target="_blank" rel="noopener noreferrer">
+            <span class="link-btn__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </span>
+            <span>Instagram &mdash; @barthering419</span>
+            <span class="link-btn__arrow">&rarr;</span>
+          </a>
+          <a class="link-btn" href="#reservation">
+            <span class="link-btn__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </span>
+            <span>LINE &mdash; ご予約・お問い合わせ</span>
+            <span class="link-btn__arrow">&rarr;</span>
+          </a>
+          <a class="link-btn" href="tel:03-0000-0000">
+            <span class="link-btn__icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </span>
+            <span>TEL &mdash; 03-0000-0000（サンプル）</span>
+            <span class="link-btn__arrow">&rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <p>c Bar the RING (Sample Site)</p>
+    <img class="footer__logo" src="assets/logo.jpeg" alt="Bar the RING" width="56" height="56">
+    <p class="footer__name">Bar the RING</p>
+    <p class="footer__address">東京都港区新橋3-3-3 新橋パイオニアビル4F</p>
+    <p class="footer__note">※ 本サイトはサンプルです。掲載情報は参考情報に基づいています。</p>
+    <p class="footer__copy">&copy; 2025 Bar the RING</p>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-label="画像拡大表示" aria-hidden="true">
+    <button class="lightbox__close" aria-label="閉じる">&times;</button>
+    <img class="lightbox__img" src="" alt="">
+  </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-
