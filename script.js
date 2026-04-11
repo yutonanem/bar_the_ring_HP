@@ -98,7 +98,19 @@
     animObserver.observe(el);
   });
 
-  /* ---------- 5. Gallery lightbox ---------- */
+  /* ---------- 5. Concept slideshow ---------- */
+  var slides = document.querySelectorAll('.slideshow__slide');
+  var currentSlide = 0;
+
+  function nextSlide() {
+    slides[currentSlide].classList.remove('is-active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('is-active');
+  }
+
+  setInterval(nextSlide, 3000);
+
+  /* ---------- 6. Lightbox ---------- */
   function openLightbox(src, alt) {
     lightboxImg.src = src;
     lightboxImg.alt = alt || '';
@@ -114,8 +126,8 @@
     lightboxImg.src = '';
   }
 
-  document.querySelectorAll('.gallery-item img').forEach(function (img) {
-    img.addEventListener('click', function () {
+  slides.forEach(function (slide) {
+    slide.addEventListener('click', function () {
       openLightbox(this.src, this.alt);
     });
   });

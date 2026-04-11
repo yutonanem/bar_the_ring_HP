@@ -538,6 +538,7 @@ body.nav-open {
   color: var(--text-secondary);
 }
 
+/* Concept image / slideshow */
 .concept__image {
   position: relative;
 }
@@ -554,39 +555,28 @@ body.nav-open {
   pointer-events: none;
 }
 
-.concept__image img {
-  width: 100%;
-  height: auto;
-  object-fit: contain;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-/* ============================
-   11. GALLERY
-   ============================ */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-}
-
-.gallery-item {
-  overflow: hidden;
-  border-radius: var(--radius);
-  cursor: pointer;
+.slideshow {
   position: relative;
-}
-
-.gallery-item img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--bg-card);
 }
 
-.gallery-item:hover img {
-  transform: scale(1.05);
+.slideshow__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slideshow__slide.is-active {
+  opacity: 1;
 }
 
 /* ============================
@@ -810,14 +800,6 @@ body.nav-open {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .concept__image img {
-    height: auto;
-  }
-
-  .gallery-grid {
-    gap: 16px;
-  }
-
   .reservation-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -856,18 +838,6 @@ body.nav-open {
   .concept-grid {
     grid-template-columns: 1fr 1fr;
     gap: 56px;
-  }
-
-  .concept__image img {
-    height: auto;
-  }
-
-  .gallery-grid {
-    gap: 20px;
-  }
-
-  .gallery-item img {
-    aspect-ratio: 3 / 2;
   }
 
   .access__map {
