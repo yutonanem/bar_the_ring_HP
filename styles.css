@@ -453,82 +453,7 @@ body.nav-open {
 }
 
 /* ============================
-   9. NEWS
-   ============================ */
-.news-list {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  padding-bottom: 8px;
-}
-
-.news-list::-webkit-scrollbar {
-  height: 4px;
-}
-
-.news-list::-webkit-scrollbar-track {
-  background: var(--bg-card);
-  border-radius: 2px;
-}
-
-.news-list::-webkit-scrollbar-thumb {
-  background: var(--accent);
-  border-radius: 2px;
-}
-
-.news-card {
-  flex: 0 0 280px;
-  scroll-snap-align: start;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: transform var(--transition), box-shadow var(--transition);
-}
-
-.news-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow);
-}
-
-.news-card__img {
-  height: 160px;
-  overflow: hidden;
-}
-
-.news-card__img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-
-.news-card:hover .news-card__img img {
-  transform: scale(1.05);
-}
-
-.news-card__body {
-  padding: 16px;
-}
-
-.news-card__date {
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  color: var(--text-secondary);
-  display: block;
-  margin-bottom: 6px;
-}
-
-.news-card__title {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.6;
-}
-
-/* ============================
-   10. CONCEPT
+   9. CONCEPT
    ============================ */
 .concept-grid {
   display: grid;
@@ -575,8 +500,8 @@ body.nav-open {
 
 .concept__image img {
   width: 100%;
-  height: 320px;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
@@ -813,12 +738,8 @@ body.nav-open {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .news-card {
-    flex: 0 0 300px;
-  }
-
   .concept__image img {
-    height: 380px;
+    height: auto;
   }
 
   .gallery-grid {
@@ -860,27 +781,13 @@ body.nav-open {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .news-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    overflow: visible;
-  }
-
-  .news-card {
-    flex: unset;
-  }
-
-  .news-card__img {
-    height: 180px;
-  }
-
   .concept-grid {
     grid-template-columns: 1fr 1fr;
     gap: 56px;
   }
 
   .concept__image img {
-    height: 420px;
+    height: auto;
   }
 
   .gallery-grid {
