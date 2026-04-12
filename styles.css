@@ -578,10 +578,13 @@ body.nav-open {
   object-fit: cover;
   opacity: 0;
   transition: opacity 1s ease;
+  pointer-events: none;
 }
 
 .slideshow__slide.is-active {
   opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
 }
 
 /* ============================
