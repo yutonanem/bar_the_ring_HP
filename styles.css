@@ -513,7 +513,7 @@ body.nav-open {
    ============================ */
 .concept-grid {
   display: grid;
-  gap: 32px;
+  gap: 20px;
   align-items: center;
 }
 
@@ -523,14 +523,19 @@ body.nav-open {
   font-weight: 600;
   letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   line-height: 1.4;
 }
 
+/* Mobile: image first, text below compact */
+.concept__image {
+  order: -1;
+}
+
 .concept__text p {
-  margin-bottom: 16px;
-  font-size: 15px;
-  line-height: 2;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
 .concept__note {
@@ -838,6 +843,20 @@ body.nav-open {
   .concept-grid {
     grid-template-columns: 1fr 1fr;
     gap: 56px;
+  }
+
+  .concept__image {
+    order: 0;
+  }
+
+  .concept__text p {
+    margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .concept__subtitle {
+    margin-bottom: 20px;
   }
 
   .access__map {
