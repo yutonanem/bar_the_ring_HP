@@ -32,7 +32,7 @@
    - フォントサイズはclamp()でビューポート幅に応じて自動調整、テキスト折り返し禁止(white-space:nowrap)
    - CHARGEカード: 飲み放題 2,500/1h〜 (MENU→menu2.jpeg) / 単品メニュー (MENU→menu1.png)、(MENU)はアンダーライン付きリンク
    - OPENカード: 日本語ラベル「営業時間」なし
-4. LINE予約（QRコード + 説明テキスト）
+4. RESERVATION（LINE + Instagram QRコード2枚並列 + 説明テキスト。PC・タブレット横並び、スマホ縦並び）
 5. NEWS（カード型リスト、SPは横スクロール、PCは2×2グリッド）
 6. CONCEPT（STORY + biproom.jpeg、2カラム）
 7. GALLERY（4枚グリッド常に2×2: view, biproom, menu1, menu2）
@@ -54,7 +54,8 @@
 - assets/logo.jpeg = ロゴ（ヘッダー・ヒーロー・フッター）
 - assets/menu1.png = 通常メニュー表（ギャラリー）
 - assets/menu2.jpeg = 飲み放題メニュー表（ギャラリー）
-- assets/LINE.jpg = オーナーのLINEのQRコード（LINE予約セクション）
+- assets/LINE.jpg = オーナーのLINEのQRコード（RESERVATIONセクション）
+- assets/Instagram.jpg = InstagramのQRコード（RESERVATIONセクション）
 
 ### 6. デザイン方針
 - **ダークテーマ**: 黒背景(#0a0a0a) + 金色アクセント(#c9a96e) + 白テキスト
@@ -92,3 +93,4 @@
 - 2026-04-26: INFORMATIONカード高さ統一（align-items:stretch + min-height）。スマホ・タブレットでCHARGEカード文字が折り返さないようfont-size・paddingを調整（PC表示に影響なし）。
 - 2026-04-26: CHARGEカードのテキスト短縮。「飲み放題 2,500/1h〜 (MENU)」「単品メニュー (MENU)」に変更。
 - 2026-04-26: INFORMATIONカードをスマホ・タブレット2×2/PC4×1に変更（絶対ルール）。4カード同サイズ。font-sizeをclamp()で自動調整、white-space:nowrapで折り返し禁止。
+- 2026-04-26: RESERVATIONセクションにInstagram QRコード(assets/Instagram.jpg)を追加。LINE・Instagram常に横並び（全デバイス共通）。説明テキストを両方に対応した内容に変更。
