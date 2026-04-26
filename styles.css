@@ -639,6 +639,37 @@ body.nav-open {
 }
 
 /* ============================
+   10. FROM THE OWNER
+   ============================ */
+.owner-grid {
+  display: grid;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* Mobile: photo on top, message below */
+.owner-grid__photo {
+  order: -1;
+}
+
+.placeholder-box {
+  border: 2px dashed rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.placeholder-box__text {
+  font-size: clamp(12px, 3vw, 14px);
+  color: var(--text-secondary);
+  letter-spacing: 0.04em;
+  text-align: center;
+  padding: 16px;
+}
+
+/* ============================
    12. ACCESS
    ============================ */
 .access-grid {
@@ -868,10 +899,18 @@ body.nav-open {
     min-height: 110px;
   }
 
+  .owner-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .owner-grid__photo {
+    order: 0;
+  }
+
   .reservation-grid {
     grid-template-columns: 1fr 1fr;
   }
-
 
   .access-grid {
     grid-template-columns: 1fr 1fr;
@@ -908,6 +947,10 @@ body.nav-open {
   .info-card {
     padding: 24px 20px;
     min-height: 130px;
+  }
+
+  .owner-grid {
+    gap: 56px;
   }
 
   .concept-grid {
