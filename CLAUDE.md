@@ -26,10 +26,15 @@
 ### 3. 情報設計（ページ構成）
 1. HEADER（固定ヘッダー: ロゴ左 + ナビ右(PC) / ハンバーガー(SP)）
 2. HERO（view.jpeg全画面背景 + ロゴ円形表示 + タグライン）
-3. INFORMATION（4カード: 料金/営業/定休/予約、金色トップボーダー）
+3. INFORMATION（4カード: CHARGE/OPEN/CLOSED/RESERVATION、金色トップボーダー、日本語サブタイトルなし、日本語ラベルなし(CHARGE・OPEN)）
+   - **スマホ・タブレット(〜1023px): 2列×2行 / PC(1024px〜): 4列×1行**（絶対ルール）
+   - 4つのカードは全て同じサイズ
+   - フォントサイズはclamp()でビューポート幅に応じて自動調整、テキスト折り返し禁止(white-space:nowrap)
+   - CHARGEカード: 飲み放題 2,500/1h〜 (MENU→menu2.jpeg) / 単品メニュー (MENU→menu1.png)、(MENU)はアンダーライン付きリンク
+   - OPENカード: 日本語ラベル「営業時間」なし
 4. LINE予約（QRコード + 説明テキスト）
 5. NEWS（カード型リスト、SPは横スクロール、PCは2×2グリッド）
-6. CONCEPT（オーナーストーリー + biproom.jpeg、2カラム）
+6. CONCEPT（STORY + biproom.jpeg、2カラム）
 7. GALLERY（4枚グリッド常に2×2: view, biproom, menu1, menu2）
 8. ACCESS（住所・TEL・地図iframe、2カラム）
 9. LINK（Instagram/予約導線ボタン）
@@ -65,6 +70,7 @@
 - スクロールアニメーション: IntersectionObserverによるfade-in + slide-up
 - LINE QRコード: 白パディングフレームで読み取り可能に
 - ギャラリーライトボックス: クリックでフルサイズ表示
+- セクション見出し(h2): 文字下部に金色(#c9a96e)グラデーションのフットライト風装飾（::after疑似要素、z-index:-1で文字背後）
 
 ### 7. 実装対象ファイル
 - index.html（全面書き直し）
@@ -81,3 +87,8 @@
 - 2026-03-22: グローバルナビ（INFORMATION〜LINK）はメニューバー風にし、やや濃いめの背景色を付ける。
 - 2026-03-22: 予約・混雑確認用のLINE導線セクション（サンプル）を追加し、QRコード枠を表示する。
 - 2026-04-11: sg-management.jp参考にデザイン全面刷新。白ベース→ダークテーマ、ハンバーガーメニュー、スクロールアニメーション、ライトボックス等を追加。
+- 2026-04-26: INFORMATIONカードをスマホでも2×2グリッド表示に変更。CONCEPTサブタイトルを「STORY」に変更。INFORMATIONの日本語サブタイトル「料金・営業案内」を削除。セクション見出しに金色フットライト装飾を追加。ハンバーガーメニューのviewport全体カバーを修正（position:fixed + 明示的サイズ指定）。
+- 2026-04-26: CHARGEカードの「料金」ラベル削除、OPENカードの「営業時間」ラベル削除。CHARGEカード内容を飲み放題/単品メニューの2行構成に変更し、(MENU)リンク（アンダーライン付き）でメニュー画像に遷移。
+- 2026-04-26: INFORMATIONカード高さ統一（align-items:stretch + min-height）。スマホ・タブレットでCHARGEカード文字が折り返さないようfont-size・paddingを調整（PC表示に影響なし）。
+- 2026-04-26: CHARGEカードのテキスト短縮。「飲み放題 2,500/1h〜 (MENU)」「単品メニュー (MENU)」に変更。
+- 2026-04-26: INFORMATIONカードをスマホ・タブレット2×2/PC4×1に変更（絶対ルール）。4カード同サイズ。font-sizeをclamp()で自動調整、white-space:nowrapで折り返し禁止。

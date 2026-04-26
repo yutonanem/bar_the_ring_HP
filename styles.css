@@ -232,7 +232,12 @@ button {
 .header__nav.is-open {
   display: flex;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -399,6 +404,21 @@ body.nav-open {
   letter-spacing: 0.15em;
   color: var(--text-heading);
   line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.section__heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: -10%;
+  width: 120%;
+  height: 12px;
+  background: radial-gradient(ellipse at center, rgba(201, 169, 110, 0.85) 0%, rgba(201, 169, 110, 0.35) 40%, transparent 70%);
+  filter: blur(4px);
+  z-index: -1;
+  pointer-events: none;
 }
 
 .section__heading p {
@@ -413,7 +433,9 @@ body.nav-open {
    ============================ */
 .info-grid {
   display: grid;
-  gap: 16px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  align-items: stretch;
 }
 
 .info-card {
@@ -421,8 +443,15 @@ body.nav-open {
   border: 1px solid var(--border);
   border-top: 3px solid var(--accent);
   border-radius: var(--radius);
-  padding: 24px 20px;
+  padding: 14px 8px;
+  min-height: 100px;
   transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.info-card__body {
+  font-size: clamp(8px, 2.8vw, 13px);
+  line-height: 1.6;
+  white-space: nowrap;
 }
 
 .info-card:hover {
@@ -432,23 +461,20 @@ body.nav-open {
 
 .info-card h3 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px;
+  font-size: clamp(12px, 3.5vw, 18px);
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.08em;
   color: var(--accent);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  white-space: nowrap;
 }
 
 .info-card__label {
-  font-size: 11px;
+  font-size: clamp(8px, 2vw, 11px);
   color: var(--text-secondary);
-  letter-spacing: 0.08em;
-  margin-bottom: 12px;
-}
-
-.info-card__body {
-  font-size: 15px;
-  line-height: 1.7;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+  white-space: nowrap;
 }
 
 .info-card__note {
@@ -461,6 +487,16 @@ body.nav-open {
   font-size: 13px;
   color: var(--accent);
   letter-spacing: 0.04em;
+}
+
+.info-card__menu-link {
+  color: var(--accent);
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.info-card__menu-link:hover {
+  color: var(--text-heading);
 }
 
 /* ============================
@@ -805,7 +841,12 @@ body.nav-open {
   }
 
   .info-grid {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .info-card {
+    padding: 16px 10px;
+    min-height: 110px;
   }
 
   .reservation-grid {
@@ -841,6 +882,12 @@ body.nav-open {
 
   .info-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .info-card {
+    padding: 24px 20px;
+    min-height: 130px;
   }
 
   .concept-grid {
